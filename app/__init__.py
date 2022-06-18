@@ -28,8 +28,6 @@ app = Flask(__name__, template_folder='templates')  ## To upload files to folder
     #return render_template("index.html")
 
 
-
-
 def dice_coeff(y_true, y_pred):
     smooth = 1.
     # Flatten
