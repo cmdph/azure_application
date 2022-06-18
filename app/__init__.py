@@ -65,7 +65,7 @@ def get_result():
         
         # The mask our model predicts
         img = np.expand_dims(image,axis=0)
-        pred_mask=model.predict(img)
+        #pred_mask=model.predict(img)
         pred_mask = np.argmax(pred_mask, axis=-1)
         pred_mask = np.expand_dims(pred_mask, axis=-1)
         pred_mask = np.squeeze(pred_mask)
@@ -75,7 +75,7 @@ def get_result():
         
         return render_template("result.html",image_name=image_name, result = True) 
     else:
-        flash(u'Identifiant image erroné.')
+        #flash(u'Identifiant image erroné.')
         return render_template('index.html',image_name='', result = False)
     
     #return render_template('result.html', id_image=id_image)
